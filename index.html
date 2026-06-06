@@ -176,6 +176,15 @@
     color: inherit;
     transition: background .25s ease, transform .25s ease;
   }
+  .card-title-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .card-title-link:focus-visible {
+    outline: 2px solid var(--rust);
+    outline-offset: 4px;
+  }
   /* asymmetric featured cards */
   .card:nth-child(1) { grid-column: span 6; min-height: 340px; }
   .card:nth-child(2) { grid-column: span 6; min-height: 340px; }
@@ -187,6 +196,10 @@
   }
   .card:hover .card-title { color: var(--rust); }
   .card:hover .card-arrow { transform: translate(4px, -4px); color: var(--rust); }
+  .card-arrow {
+    text-decoration: none;
+  }
+  .card-arrow:hover { color: var(--rust); }
 
   .card-head {
     display: flex;
@@ -263,6 +276,38 @@
     font-size: 10px;
     letter-spacing: 0.1em;
     color: var(--muted);
+  }
+  .card-actions {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .action-source {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color .2s, border-color .2s;
+  }
+  .action-source:hover { color: var(--ink); border-color: var(--ink); }
+  .action-cta {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rust);
+    padding-bottom: 2px;
+    transition: color .2s, border-color .2s, transform .2s;
+    display: inline-block;
+  }
+  .action-cta:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+    transform: translateX(2px);
   }
 
   /* footer */
@@ -367,44 +412,59 @@
 
     <div class="grid">
 
-      <a class="card reveal" href="https://github.com/fuzzyqbit/star-wars-chess" target="_blank" rel="noopener">
+      <article class="card reveal">
         <div class="card-head">
           <span class="card-index">01 / 03</span>
-          <span class="card-arrow">↗</span>
+          <a class="card-arrow" href="https://fuzzyqbit.github.io/star-wars-chess/" target="_blank" rel="noopener" aria-label="Open Star Wars Chess">↗</a>
         </div>
-        <h2 class="card-title">Star Wars Chess</h2>
+        <a class="card-title-link" href="https://fuzzyqbit.github.io/star-wars-chess/" target="_blank" rel="noopener">
+          <h2 class="card-title">Star Wars Chess</h2>
+        </a>
         <p class="card-desc">A chessboard reimagined with characters from a galaxy far, far away — played in the browser.</p>
         <div class="card-foot">
           <span class="lang" data-lang="JavaScript"><span class="lang-dot"></span>JavaScript</span>
-          <span class="repo-handle">/star-wars-chess</span>
+          <div class="card-actions">
+            <a class="action-source" href="https://github.com/fuzzyqbit/star-wars-chess" target="_blank" rel="noopener">Source</a>
+            <a class="action-cta" href="https://fuzzyqbit.github.io/star-wars-chess/" target="_blank" rel="noopener">Play&nbsp;→</a>
+          </div>
         </div>
-      </a>
+      </article>
 
-      <a class="card reveal" href="https://github.com/fuzzyqbit/periodic-table" target="_blank" rel="noopener">
+      <article class="card reveal">
         <div class="card-head">
           <span class="card-index">02 / 03</span>
-          <span class="card-arrow">↗</span>
+          <a class="card-arrow" href="https://fuzzyqbit.github.io/periodic-table/" target="_blank" rel="noopener" aria-label="Open Periodic Table">↗</a>
         </div>
-        <h2 class="card-title">Periodic Table</h2>
-        <p class="card-desc">A Python rendering of the elements — every box, every group, every noble gas in its place.</p>
+        <a class="card-title-link" href="https://fuzzyqbit.github.io/periodic-table/" target="_blank" rel="noopener">
+          <h2 class="card-title">Periodic Table</h2>
+        </a>
+        <p class="card-desc">A rendering of the elements — every box, every group, every noble gas in its place.</p>
         <div class="card-foot">
           <span class="lang" data-lang="Python"><span class="lang-dot"></span>Python</span>
-          <span class="repo-handle">/periodic-table</span>
+          <div class="card-actions">
+            <a class="action-source" href="https://github.com/fuzzyqbit/periodic-table" target="_blank" rel="noopener">Source</a>
+            <a class="action-cta" href="https://fuzzyqbit.github.io/periodic-table/" target="_blank" rel="noopener">Explore&nbsp;→</a>
+          </div>
         </div>
-      </a>
+      </article>
 
-      <a class="card reveal" href="https://github.com/fuzzyqbit/link2notes" target="_blank" rel="noopener">
+      <article class="card reveal">
         <div class="card-head">
           <span class="card-index">03 / 03</span>
-          <span class="card-arrow">↗</span>
+          <a class="card-arrow" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener" aria-label="Open Link to Notes">↗</a>
         </div>
-        <h2 class="card-title">Link to Notes</h2>
+        <a class="card-title-link" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener">
+          <h2 class="card-title">Link to Notes</h2>
+        </a>
         <p class="card-desc">Take a URL, get notes — a tool for turning links into something readable.</p>
         <div class="card-foot">
           <span class="lang" data-lang="JavaScript"><span class="lang-dot"></span>JavaScript</span>
-          <span class="repo-handle">/link2notes</span>
+          <div class="card-actions">
+            <a class="action-source" href="https://github.com/fuzzyqbit/link2notes" target="_blank" rel="noopener">Source</a>
+            <a class="action-cta" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener">Open&nbsp;→</a>
+          </div>
         </div>
-      </a>
+      </article>
 
     </div>
 
