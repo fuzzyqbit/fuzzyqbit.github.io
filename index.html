@@ -188,8 +188,8 @@
   /* asymmetric featured cards */
   .card:nth-child(1) { grid-column: span 6; min-height: 340px; }
   .card:nth-child(2) { grid-column: span 6; min-height: 340px; }
-  .card:nth-child(3) { grid-column: span 12; min-height: 220px; }
-  .card:nth-child(3) .card-desc { max-width: 48ch; }
+  .card:nth-child(3) { grid-column: span 6; min-height: 280px; }
+  .card:nth-child(4) { grid-column: span 6; min-height: 280px; }
 
   .card:hover {
     background: var(--paper-deep);
@@ -349,7 +349,8 @@
   .card.reveal:nth-child(1) { animation-delay: 0.70s; }
   .card.reveal:nth-child(2) { animation-delay: 0.78s; }
   .card.reveal:nth-child(3) { animation-delay: 0.86s; }
-  footer.reveal { animation-delay: 1.0s; }
+  .card.reveal:nth-child(4) { animation-delay: 0.94s; }
+  footer.reveal { animation-delay: 1.1s; }
 
   /* responsive */
   @media (max-width: 960px) {
@@ -395,7 +396,7 @@
         <p class="tagline">A working notebook of small programs, side projects, and unfinished experiments — published here so they don't sit in a folder alone.</p>
         <div class="stat">
           <div class="label">Projects</div>
-          <div class="value">03</div>
+          <div class="value">04</div>
         </div>
         <div class="stat">
           <div class="label">Languages</div>
@@ -414,7 +415,7 @@
 
       <article class="card reveal">
         <div class="card-head">
-          <span class="card-index">01 / 03</span>
+          <span class="card-index">01 / 04</span>
           <a class="card-arrow" href="https://fuzzyqbit.github.io/star-wars-chess/" target="_blank" rel="noopener" aria-label="Open Star Wars Chess">↗</a>
         </div>
         <a class="card-title-link" href="https://fuzzyqbit.github.io/star-wars-chess/" target="_blank" rel="noopener">
@@ -432,7 +433,7 @@
 
       <article class="card reveal">
         <div class="card-head">
-          <span class="card-index">02 / 03</span>
+          <span class="card-index">02 / 04</span>
           <a class="card-arrow" href="https://fuzzyqbit.github.io/periodic-table/" target="_blank" rel="noopener" aria-label="Open Periodic Table">↗</a>
         </div>
         <a class="card-title-link" href="https://fuzzyqbit.github.io/periodic-table/" target="_blank" rel="noopener">
@@ -450,7 +451,7 @@
 
       <article class="card reveal">
         <div class="card-head">
-          <span class="card-index">03 / 03</span>
+          <span class="card-index">03 / 04</span>
           <a class="card-arrow" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener" aria-label="Open Link to Notes">↗</a>
         </div>
         <a class="card-title-link" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener">
@@ -462,6 +463,24 @@
           <div class="card-actions">
             <a class="action-source" href="https://github.com/fuzzyqbit/link2notes" target="_blank" rel="noopener">Source</a>
             <a class="action-cta" href="https://fuzzyqbit.github.io/link2notes/" target="_blank" rel="noopener">Open&nbsp;→</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-head">
+          <span class="card-index">04 / 04</span>
+          <a class="card-arrow" href="https://fuzzyqbit.github.io/math-helper/" target="_blank" rel="noopener" aria-label="Open Math Helper">↗</a>
+        </div>
+        <a class="card-title-link" href="https://fuzzyqbit.github.io/math-helper/" target="_blank" rel="noopener">
+          <h2 class="card-title">Math Helper</h2>
+        </a>
+        <p class="card-desc">A helper for working through math problems — quick calculations, step by step.</p>
+        <div class="card-foot">
+          <span class="lang" data-lang="Python"><span class="lang-dot"></span>Python</span>
+          <div class="card-actions">
+            <a class="action-source" href="https://github.com/fuzzyqbit/math-helper" target="_blank" rel="noopener">Source</a>
+            <a class="action-cta" href="https://fuzzyqbit.github.io/math-helper/" target="_blank" rel="noopener">Use&nbsp;→</a>
           </div>
         </div>
       </article>
